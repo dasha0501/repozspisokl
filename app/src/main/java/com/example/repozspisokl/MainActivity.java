@@ -1,6 +1,8 @@
 package com.example.repozspisokl;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -56,5 +58,11 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText("Что-то пошло не так: " + throwable.getMessage());
             }
         });
+    }
+
+    public void Next(View v)
+    {
+        Intent intent = new Intent(getApplicationContext(), MainActivityPr2.class);
+        startActivity(intent);
     }
 }
